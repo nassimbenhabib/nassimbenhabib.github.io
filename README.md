@@ -14,6 +14,6 @@ Upload the contents of this folder to the repository root. In Settings → Pages
 ## Edit
 Edit the HTML for page content and `assets/style.css` for layout. Keep translations consistent.
 
-The portrait currently uses a monogram. Replace `assets/portrait.svg` with your verified portrait, or change the image `src` in the three home pages.
+The supplied portrait is included as `assets/portrait.png` and used in all three home pages.
 
 The PDF is French. Project diagrams are conceptual illustrations, not experimental results.
