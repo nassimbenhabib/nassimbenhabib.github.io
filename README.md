@@ -16,4 +16,4 @@ Edit the HTML for page content and `assets/style.css` for layout. Keep translati
 
 The supplied portrait is included as `assets/portrait.png` and used in all three home pages.
 
-The PDF is French. Project diagrams are conceptual illustrations, not experimental results.
+Each home page links to the CV in its own language. The English LaTeX source is included under `CV_source/`. Project diagrams are conceptual illustrations, not experimental results.

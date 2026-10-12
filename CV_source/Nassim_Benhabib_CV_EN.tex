@@ -1,0 +1,107 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[margin=15mm,top=12mm,bottom=12mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[scaled=.96]{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{xcolor,tabularx,enumitem,paracol}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{empty}
+
+\definecolor{navy}{HTML}{142A3E}
+\definecolor{blue}{HTML}{236484}
+\definecolor{muted}{HTML}{536575}
+\definecolor{rule}{HTML}{D4DFE5}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1em}
+\setlist[itemize]{leftmargin=1.15em,label={\color{blue}\raisebox{.15ex}{\footnotesize\textbullet}},topsep=2pt,partopsep=0pt,itemsep=2pt,parsep=0pt}
+\newcommand{\cvsection}[1]{\par\vspace{6pt}{\color{blue}\bfseries\fontsize{9}{11}\selectfont\MakeUppercase{#1}}\par\vspace{2pt}{\color{rule}\hrule height .6pt}\vspace{3pt}}
+\newcommand{\position}[3]{\par{\bfseries\color{navy}#1}\hfill{\small\color{muted}#3}\par\vspace{1pt}{\small\color{muted}#2}\par\vspace{-4pt}}
+
+\begin{document}
+\color{navy}
+
+\noindent\colorbox{navy}{\begin{minipage}[t]{\dimexpr\linewidth-2\fboxsep\relax}
+\vspace{8pt}\hspace{9pt}{\color{white}\fontsize{22}{25}\selectfont\bfseries Nassim BENHABIB}\par
+\vspace{4pt}\hspace{9pt}{\color{white}\fontsize{10}{12}\selectfont ROBOTICS R\&D ENGINEER}\par
+\vspace{3pt}\hspace{9pt}{\color{white}\fontsize{9}{11}\selectfont Advanced Control --- Navigation --- State Estimation --- Autonomous Systems}\vspace{9pt}
+\end{minipage}}\par
+\vspace{8pt}
+\begin{tabularx}{\linewidth}{@{}X r@{}}
+{\small Montrouge, France\quad\textcolor{rule}{|}\quad +33 6 29 12 31 76\quad\textcolor{rule}{|}\quad\href{mailto:nassim.benhabib@hotmail.fr}{nassim.benhabib@hotmail.fr}} &
+{\small\color{blue}\href{https://www.linkedin.com/in/nassim-benhabib-a44a7013b}{LinkedIn}\quad\textcolor{rule}{|}\quad\href{https://nassimbenhabib.github.io/}{Portfolio}}
+\end{tabularx}
+\vspace{5pt}
+{\small\color{blue}\bfseries Best Paper Award in Automation, ICRA 2020}
+{\small\color{muted}\quad|\quad First author}\par
+
+\cvsection{Profile}
+{\small\setlength{\baselineskip}{13pt}
+Robotics engineer specializing in advanced control, dynamic modeling and autonomous systems, with experience in research at Inria and industrial development. I design and implement control, guidance and motion-planning algorithms in C++, then validate them in simulation and on experimental platforms. My background combines autonomous drone navigation, system identification and physical human--robot assistance through constrained predictive control. I am seeking an R\&D role in robotics, control or autonomous systems.\par}
+
+\cvsection{Engineering \& research experience}
+\position{UAVIA}{Autonomous Navigation \& Control Engineer}{Oct. 2022 -- Mar. 2026}
+\begin{itemize}\small
+\item \textbf{Constrained predictive control.} Developed a C++ MPC controller formulated as a quadratic program with qpOASES, accounting for velocity, acceleration, braking and yaw constraints.
+\item \textbf{Motion planning.} Combined global Dijkstra search, local safety corridors and MPC to generate feasible trajectories.
+\item \textbf{Guidance and precision landing.} Designed RTK/IMU-based approach logic with an evolving capture zone, phased descent and contact detection.
+\item \textbf{Safety and degraded modes.} Implemented fallback behaviors and geofencing accounting for restricted areas, wind, position uncertainty and projected fall trajectories.
+\item \textbf{Mission-specific navigation.} Developed terrain-following with altitude adaptation to terrain, and navigation for detecting and covering CO$_2$ and CH$_4$ emission plumes.
+\item \textbf{Integration and validation.} Integrated autonomy services with DJI, Parrot, PX4 and ArduPilot; validated them through simulation, telemetry analysis, tuning and flight tests.
+\end{itemize}
+\vspace{2pt}
+
+\position{Inria Bordeaux}{Doctoral Researcher in Robotics}{Nov. 2018 -- 2022}
+\begin{itemize}\small
+\item \textbf{Modeling and optimization.} Built a dynamic model of human--robot--environment interaction; formulated inverse dynamics and force estimation as quadratic programs under contact constraints and physical limits.
+\item \textbf{System identification.} Estimated parameters from measured trajectories and forces; assessed prediction errors on independent experimental trials.
+\item \textbf{Simulation and experimental validation.} Developed a numerical simulator and an instrumented robotic test platform; compared simulated and measured motion and forces under nominal and perturbed conditions.
+\item \textbf{Human--robot assistance control.} Implemented adaptive assistance on the experimental platform using predictive control, quadratic optimization and physical constraints.
+\end{itemize}
+\vspace{2pt}
+
+\position{ISIR, Sorbonne University}{Robotics Control Intern}{Mar. -- Sept. 2018}
+\begin{itemize}\small
+\item Developed a microrobotic co-manipulation controller and restored an experimental pantograph for validation.
+\end{itemize}
+\vspace{2pt}
+
+\position{Parrot}{Drone Research Intern}{May -- Sept. 2017}
+\begin{itemize}\small
+\item Prototyped and developed a rapid drone-battery charging system based on an existing setup.
+\end{itemize}
+
+
+\vspace{1pt}
+\setlength{\columnsep}{19pt}
+\begin{paracol}{2}
+\raggedright
+\cvsection{Technical skills}
+\small
+\textbf{Control}\par\vspace{2pt}
+MPC, quadratic optimization (QP), PID, LQR, adaptive control, guidance.\par\vspace{4pt}
+\textbf{Modeling and estimation}\par\vspace{2pt}
+Dynamics, parameter identification, EKF/UKF, sensor fusion, simulation.\par\vspace{4pt}
+\textbf{Autonomous robotics}\par\vspace{2pt}
+Motion planning, trajectory generation, safety, experimental validation.\par\vspace{4pt}
+\textbf{Development}\par\vspace{2pt}
+C++, Python, MATLAB/Simulink, Linux, ROS, Eigen, Boost, qpOASES, Docker, Gazebo.\par\vspace{4pt}
+\textbf{Languages}\par\vspace{2pt}
+French, English, Arabic.
+
+\switchcolumn
+\cvsection{Education \& publications}
+\small
+\textbf{M2 Robotics, Assistance and Mobility}\par
+Universit\'e Paris-Saclay \hfill 2018\par\vspace{4pt}
+\textbf{M1 Electronics, Energy and Automatic Control}\par
+ENS Paris-Saclay \hfill 2017\par\vspace{4pt}
+\textbf{M2 Automatic Control and Industrial Computing}\par
+USTO Oran\par\vspace{6pt}
+{\color{muted}Doctoral research at Inria Bordeaux, 2018--2022; thesis not yet defended, defense envisaged in early 2027.}\par
+\vspace{7pt}\textbf{Selected publications}\par
+{\color{muted}\textbf{Benhabib}, Padois, Daney, ``Securing Industrial Operators with Collaborative Robots,'' IEEE ICRA 2020.}\par\vspace{4pt}
+{\color{muted}Coauthor, ``Task-Consistent Signaling Motions,'' HRI 2022.}\par
+\end{paracol}
+\end{document}
